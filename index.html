@@ -177,6 +177,84 @@
                 </div> -->
             </section>
 
+
+
+
+            <!-- 
+            
+            TAB 
+            
+            -->
+
+            <section class="tab-container">
+
+                <div class="tab-list" aria-label="Tab navigation" role="tablist">
+
+                    <button class="tab-btn" aria-selected="true" role="tab" id="tab-1" tabindex="0" aria-controls="panel-1" data-tab-btn >Repositories</button>
+
+                    <button class="tab-btn" aria-selected="false" role="tab" id="tab-2" tabindex="-1" aria-controls="panel-2" data-tab-btn data-froked-tab-btn>Forked</button>
+
+                    <button class="tab-btn" aria-selected="false" role="tab" id="tab-3" tabindex="-1" aria-controls="panel-3" data-tab-btn data-followers-tab-btn>Followers</button>
+
+                    <button class="tab-btn" aria-selected="false" role="tab" id="tab-4" tabindex="-1" aria-controls="panel-4" data-tab-btn data-following-tab-btn>Following</button>
+                </div>
+
+                <div class="tab-pane" role="tabpanel" id="tabpanel-1" tabindex="0" aria-labelledby="tab-1" data-tab-panel data-repo-panel>
+                    <h2 class="sr-only">Repositories</h2>
+
+                    <article class="card repo-card">
+
+                        <div class="card-body">
+
+                            <a href="#" target="_blank" class="card-title">
+                                <h3 class="title-3">weatherio-starter</h3>
+                            </a>
+
+                            <p class="card-text">Starter file for weatherio project</p>
+
+                            <span class="badge">Public</span>
+
+                        </div>
+
+                        <div class="card-footer">
+
+                            <div class="meta-item">
+                                <span class="material-symbols-rounded" aria-hidden="true">code_blocks</span>
+
+                                <span class="span">CSS</span>
+                            </div>
+
+                            <div class="meta-item">
+                                <span class="material-symbols-rounded">star_rate</span>
+
+                                <span class="span">12</span>
+                            </div>  
+
+                            <div class="meta-item">
+                                <span class="material-symbols-rounded">family_history<span>
+
+                                <span class="span">4</span>
+                            </div>
+
+
+                        </div>
+
+                    </article>
+
+                    <div class="error-content">
+                        <p class="title-1">Oops! :(</p>
+                        <p class="text">Doesn't have any public repositories yet.</p>
+                    </div>
+
+                </div>
+
+                <div class="tab-pane" role="tabpanel" id="tabpanel-2" tabindex="0" aria-labelledby ="tab-2" data-tab-panel data-forked-panel hidden></div>
+
+                <div class="tab-pane" role="tabpanel" id="tabpanel-3" tabindex="0" aria-labelledby="tab-3" data-tab-panel data-followers-panel hidden></div>
+
+                <div class="tab-pane" role="tabpanel" id="tabpanel-4" tabindex="0" aria-labelledby="tab-4" data-tab-panel data-following-panel hidden></div>
+
+            </section>
         </div>
      </main>
 
