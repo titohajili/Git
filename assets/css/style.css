@@ -503,6 +503,20 @@ body{
 
 /* Badge */
 
+.badge{
+  background-color: var(--surface-variant);
+  color: var(--alpha-60);
+  max-width: max-content;
+  font-size: var(--label-2);
+  font-weight: var(--weight-semiBold);
+  text-transform: uppercase;
+  height: 24px;
+  line-height: 24px;
+  padding-inline: 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--surface-variant-outline);
+}
+
 
 /* Tab navigation */
 
@@ -601,6 +615,26 @@ body{
   overflow: hidden;
   -webkit-line-clamp: 2;
   margin-block-start: 8px;
+}
+
+.repo-card .badge{
+  position: absolute;
+  top: var(--spacing);
+  right: var(--spacing);
+}
+
+.repo-card .card-footer{
+  background-color: var(--surface-variant);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing);
+}
+
+.repo-card .meta-item{
+  color: var(--on-surface);
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 /* Skeleton */
@@ -840,6 +874,46 @@ body{
 /*-----------------------------------*\
   #TAB
 \*-----------------------------------*/
+
+.tab-container .tab-list{
+  margin-inline: -16px;
+  padding-inline: 16px;
+}
+
+.tab-panel{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-block-start: 16px;
+}
+
+.tab-panel[hidden]{
+  display: none;
+}
+
+.tab-panel .card{
+  flex-grow: 1;
+  width: 100%;
+}
+
+.tab-panel .error-content{
+  width: 100%;
+  padding-block: 96px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab-panel .error-content .title-1{
+  color: var(--alpha-50);
+}
+
+.tab-panel .error-content .text{
+  color: var(--alpha-80);
+}
+
 
 
 
