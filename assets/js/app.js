@@ -1,6 +1,8 @@
 
 'use strict';
 
+import { fetchData } from "./api.js";
+
 
 const addEventOnElements = function ($elements, eventType, callback) {
     for (const $item of $elements) {
@@ -74,3 +76,32 @@ addEventOnElements($tabBtns, "keydown", function (e) {
         $previousElement.focus();
     }           
 });
+
+
+/**
+ * Work width api
+ */
+
+const $searchSubmit = document.querySelector("[data-search-submit]");
+
+let apiUrl = "https://api.github.com/users/codewithsadee"
+let repoUrl, followerUrl, followingUrl = "";
+
+const searchUser = function () {
+    if (!$searchField.value) return;
+
+    apiUrl = `https://api.github.com/users/${$searchField.value}`;
+}
+
+$searchSubmit.addEventListener("click", searchUser);
+
+
+
+$searchField.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") searchUser();
+});
+
+
+
+const $profileCard = document.querySelector("[data-profile-card]");
+const $repoPanel = document.querySelector("[data-repo-panel]");
