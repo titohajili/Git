@@ -287,9 +287,20 @@ fetchData(profileUrl, data => {
 
     `;
 }, () => {
+    $error.style.display = "grid";
+    document.body.style.overflow = "hidden";
+
+    $error.innerHTML = `
     
+    
+                <p class="title-1">Oops! :(</p>
+
+
+                <p class="text">There is no account with this username yet.</p>
+
+    `;
 });
 
 }
 
-// updateProfile(apiUrl)
+ updateProfile(apiUrl)
