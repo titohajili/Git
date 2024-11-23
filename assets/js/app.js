@@ -2,6 +2,7 @@
 'use strict';
 
 import { fetchData } from "./api.js";
+import { numberToKilo } from "./module.js";
 
 
 const addEventOnElements = function ($elements, eventType, callback) {
@@ -267,11 +268,11 @@ fetchData(profileUrl, data => {
                     </li>
 
                     <li class="stats-item">
-                        <span class="body">${followers}</span> Followers
+                        <span class="body">${numberToKilo(followers)}</span> Followers
                     </li>
 
                     <li class="stats-item">
-                        <span class="body">${following}</span> Following
+                        <span class="body">${numberToKilo(following)}</span> Following
                     </li>
 
                     <li class="stats-item">
@@ -286,6 +287,9 @@ fetchData(profileUrl, data => {
                 </div>
 
     `;
+
+    updateRepository()
+
 }, () => {
     $error.style.display = "grid";
     document.body.style.overflow = "hidden";
